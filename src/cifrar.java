@@ -4,7 +4,7 @@ import javax.crypto.spec.DESKeySpec;
 import java.security.*;
 import java.util.*;
 
-public class cifrar_descifrar {
+public class cifrar {
 	public static void main(String[] args) {
 
 		String comando1 = "-c";
