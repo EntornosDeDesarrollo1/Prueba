@@ -1,29 +1,4 @@
 import java.io.*;
-import javax.crypto.*;
-import javax.crypto.spec.DESKeySpec;
-import java.security.*;
-import java.util.*;
-
-public class cifrar {
-	public static void main(String[] args) {
-
-		String comando1 = "-c";
-		String comando2 = "-d";
-
-		// COMANDO 1 o COMANDO 2
-		if ((comando1.equals(args[0])) || (comando2.equals(args[0]))) {
-			// leer clave por teclado
-			try {
-				InputStreamReader leer_clave = new InputStreamReader(System.in);
-				BufferedReader buff_clave = new BufferedReader(leer_clave);
-				System.out.print("Escriba una clave: ");
-				String clave = buff_clave.readLine();
-
-				// pasar clave a la clase SecretKey
-				try {
-					SecretKeyFactory skf = SecretKeyFactory.getInstance("DES");
-					DESKeySpec kspec = new DESKeySpec(clave.getBytes());
-					SecretKey ks = skf.generateSecret(kspec);
 
 					// Inicializar el cifrado
 					try {
