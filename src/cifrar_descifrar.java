@@ -14,7 +14,7 @@ public class cifrar_descifrar {
 		if ((comando1.equals(args[0])) || (comando2.equals(args[0]))) {
 			// leer clave por teclado
 			try {
-				 leer_clave = new InputStreamReader(System.in);
+				InputStreamReader leer_clave = new InputStreamReader(System.in);
 				BufferedReader buff_clave = new BufferedReader(leer_clave);
 				System.out.print("Escriba una clave: ");
 				String clave = buff_clave.readLine();
